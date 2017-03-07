@@ -1,5 +1,0 @@
-@startuml
-
-User -> (login) : correct credentials
-
-@enduml
