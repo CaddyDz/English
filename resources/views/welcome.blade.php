@@ -1,95 +1,75 @@
-<!doctype html>
-<html lang="{{ config('app.locale') }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.master')
 
-        <title>Laravel</title>
+@section('content')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+<div class="jumbotron">
+	<div id="header">
+		<img src="{{ asset('img/brand.png') }}" id="logo" alt="English DZ Logo">
+		<span id="websiteTitle">English DZ</span>
+		<p id="websiteSlogan">Learn English in Algeria, the fun way</p>
+	</div>
+</div>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+<div id="theCarousel" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+		<li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#theCarousel" data-slide-to="1"></li>
+		<li data-target="#theCarousel" data-slide-to="2"></li>
+		<li data-target="#theCarousel" data-slide-to="3"></li>
+	</ol>
+	<div class="carousel-inner">
+		<div class="item active">
+			<div class="slide1"></div>
+				<div class="carousel-caption">
+					<h1>English DZ</h1>
+					<p>Algerian English speakers social network</p>
+					@if(!Auth::user())
+					<p><a href="{{ url('/register') }}" class="btn btn-success btn-sm">Sign Up Now!</a></p>
+				@endif
+				</div>
+		</div>
+		<div class="item">
+			<div class="slide2"></div>
+				<div class="carousel-caption">
+					<h1>English DZ</h1>
+					<p>Algerian English speakers social network</p>
+				</div>
+		</div>
+		<div class="item">
+			<div class="slide3"></div>
+				<div class="carousel-caption">
+					<h1>English DZ</h1>
+					<p>Algerian English speakers social network</p>
+				</div>
+		</div>
+		<div class="item">
+			<div class="slide4"></div>
+				<div class="carousel-caption">
+					<h1>English DZ</h1>
+					<p>Algerian English speakers social network</p>
+				</div>
+		</div>
+	</div>
+	<a class="right carousel-control" href="#theCarousel" data-slide="next">
+	<span class="glyphicon glyphicon-chevron-right"></span></a>
+	<a class="left carousel-control" href="#theCarousel" data-slide="prev">
+	<span class="glyphicon glyphicon-chevron-left"></span></a>
+</div>
+@if (!Auth::user())
+<div class="row usr-login">
+	<div class="col-lg-3 col-sm-8 col-lg-offset-2 col-sm-offset-2 usr-login-sec">
+		<p>Existing user?</p>
+		<a class="usr-btn" href="{{ url('/login') }}">Login</a>
+	</div>
+	<div class="col-lg-3 col-sm-8 col-lg-offset-2 col-sm-offset-2 usr-register-sec">
+		<p>New user?</p>
+		<a class="usr-btn" href="{{ url('/register') }}">Register</a>
+	</div>
+</div>
+@endif
 
-            .full-height {
-                height: 100vh;
-            }
+@endsection
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+@section('stylesheets')
+  <link href="{{ asset('css/welcome.css') }}" rel="stylesheet">
+@endsection
