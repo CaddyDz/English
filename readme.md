@@ -25,7 +25,7 @@ Automated installation coming soon
 **Clone the project (replace **Name** with a name of your choice)**
 
 ``` shell
-$ git clone --depth 1 git@github.com:CaddyDz/English Name
+$ git clone --depth 1 https://github.com/CaddyDz/English Name
 ```
 
 ### Install the project dependencies using [Composer](https://getcomposer.org/)
