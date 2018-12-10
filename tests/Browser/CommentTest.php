@@ -6,7 +6,6 @@ use Tests\DuskTestCase;
 
 class CommentTest extends DuskTestCase
 {
-
     private $user;
     private $status;
     private $comment;
@@ -18,6 +17,7 @@ class CommentTest extends DuskTestCase
         $this->status = create('English\Status', ['user_id' => $this->user->id]);
         $this->comment = create('English\Comment', ['status_id' => $this->status->id, 'user_id' => $this->user->id]);
     }
+
     /**
      * Given we have an authenticated user
      * And an existing status
