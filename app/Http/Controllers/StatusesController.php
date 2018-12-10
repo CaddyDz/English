@@ -25,43 +25,44 @@ class StatusesController extends Controller
         $this->middleware('auth')->except(['index', 'show']);
     }
 
-	/**
-	 * Display a listing of the statuses.
-	 *
-	 * @param Tag $tag
-	 * @param StatusFilters $filters
-	 *
-	 * @return \Illuminate\Http\Response
-	 */
-	public function index(Tag $tag, StatusFilters $filters)
-	{
-		$statuses = $this->getStatuses($tag, $filters);
-		return view('statuses.index', compact('statuses'));
-	}
+    /**
+     * Display a listing of the statuses.
+     *
+     * @param Tag           $tag
+     * @param StatusFilters $filters
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index(Tag $tag, StatusFilters $filters)
+    {
+        $statuses = $this->getStatuses($tag, $filters);
 
-	/**
-	 * Store a newly created status in storage.
-	 *
-	 * @param \Illuminate\Http\Request $request
-	 *
-	 * @return \Illuminate\Http\Response
-	 */
-	public function store(Request $request)
-	{
-		$this->validate($request, [
-			'body'   => 'required',
-			'tags'   => 'required|between:1,5',
-			'tags.*' => 'exists:tags,id|distinct',
-		], [
-			'tags.between'  => 'You can only choose up to 5 tags',
-			'tags.required' => 'You must pick at least 1 tag',
-			'body.required' => 'Can\'t post an empty status',
-		]);
+        return view('statuses.index', compact('statuses'));
+    }
 
-		$status = Status::create([
-			'user_id' => auth()->id(),
-			'body'    => $request->body,
-		]);
+    /**
+     * Store a newly created status in storage.
+     *
+     * @param \Illuminate\Http\Request $request
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'body'   => 'required',
+            'tags'   => 'required|between:1,5',
+            'tags.*' => 'exists:tags,id|distinct',
+        ], [
+            'tags.between'  => 'You can only choose up to 5 tags',
+            'tags.required' => 'You must pick at least 1 tag',
+            'body.required' => 'Can\'t post an empty status',
+        ]);
+
+        $status = Status::create([
+            'user_id' => auth()->id(),
+            'body'    => $request->body,
+        ]);
 
         return redirect($status->path());
     }
