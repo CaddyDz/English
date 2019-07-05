@@ -1,7 +1,7 @@
 <?php
 
-use English\Status;
 use English\Comment;
+use English\Status;
 use Illuminate\Database\Seeder;
 
 class StatusesTableSeeder extends Seeder
