@@ -3,9 +3,9 @@
 namespace Tests\Browser;
 
 use English\User;
-use Tests\DuskTestCase;
-use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Laravel\Dusk\Browser;
+use Tests\DuskTestCase;
 
 class LoginTest extends DuskTestCase
 {

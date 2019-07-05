@@ -2,15 +2,15 @@
 
 namespace English\Http\Controllers;
 
-use English\Status;
 use English\Http\Requests\PostCommentRequest;
+use English\Status;
 
 class CommentsController extends Controller
 {
     /**
      * Create a new controller instance.
      * Pass through the auth middleware
-     * Only authenticated users can reach this controller
+     * Only authenticated users can reach this controller.
      *
      * @return void
      */
