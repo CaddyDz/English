@@ -2,12 +2,10 @@
 
 namespace English\Http\Controllers;
 
-use English\Tag;
-use English\Status;
-use Illuminate\Http\Request;
 use English\Filters\StatusFilters;
-use Illuminate\Support\Facades\DB;
-use English\Http\Requests\LikeStatusRequest;
+use English\Status;
+use English\Tag;
+use Illuminate\Http\Request;
 
 class StatusesController extends Controller
 {

@@ -37,6 +37,7 @@ class ReactsTest extends TestCase
         $this->withoutExceptionHandling();
         $status = create(Status::class);
         $this->login();
+
         try {
             $this->post("/api/statuses/$status->id/likes");
             $this->post("/api/statuses/$status->id/likes");
