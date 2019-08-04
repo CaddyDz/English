@@ -23,7 +23,7 @@ abstract class Filters
      *
      * @var array
      */
-    protected $filters = [ ];
+    protected $filters = [];
 
     /**
      * StatusFilters constructor.

@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Status extends Model
 {
-    protected $fillable = [ 'body', 'user_id' ];
+    protected $fillable = ['body', 'user_id'];
 
     protected static function boot()
     {
         parent::boot();
-        static::addGlobalScope('comments_count', function($builder) {
+        static::addGlobalScope('comments_count', function ($builder) {
             $builder->withCount('comments');
         });
     }
@@ -58,7 +58,7 @@ class Status extends Model
 
     public function like()
     {
-        $attributes = [ 'user_id' => auth()->id(), 'reacted_kind' => 'like' ];
+        $attributes = ['user_id' => auth()->id(), 'reacted_kind' => 'like'];
         if (!$this->likes()->where($attributes)->exists()) {
             $this->likes()->create($attributes);
         }

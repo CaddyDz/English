@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
-    protected $appends = [ 'ownerName', 'longAgo' ];
+    protected $appends = ['ownerName', 'longAgo'];
 
-    protected $fillable = [ 'user_id', 'status_id', 'body' ];
+    protected $fillable = ['user_id', 'status_id', 'body'];
 
     public function getOwnerNameAttribute()
     {

@@ -15,10 +15,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('*', function($view) {
+        view()->composer('*', function ($view) {
             $view->with('tags', Tag::all());
         });
-        Blade::directive('render', function($component) {
+        Blade::directive('render', function ($component) {
             return "<?php echo (app($component))->toHtml(); ?>";
         });
     }

@@ -11,7 +11,7 @@ class StatusFilters extends Filters
      *
      * @var array
      */
-    protected $filters = [ 'by', 'popular' ];
+    protected $filters = ['by', 'popular'];
 
     /**
      * Filter the query by a given username.
@@ -35,7 +35,7 @@ class StatusFilters extends Filters
     protected function popular()
     {
         // Override the "latest" query filter in getStatuses() method
-        $this->builder->getQuery()->orders = [ ];
+        $this->builder->getQuery()->orders = [];
 
         return $this->builder->orderBy('comments_count', 'desc');
     }
