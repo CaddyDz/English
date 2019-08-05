@@ -13,7 +13,7 @@ class RedirectAfterLoginBrowserTest extends DuskTestCase
      * Assert that users gets redirected back to status page after login.
      */
 
-     /** @test */
+    /** @test */
     public function authenticated_users_are_redirected_back_to_intended_url()
     {
         $user = create(User::class);

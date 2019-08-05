@@ -17,7 +17,7 @@ class CommentBrowserTest extends DuskTestCase
         $this->status = create('English\Status', ['user_id' => $this->user->id]);
         $this->comment = create('English\Comment', [
             'status_id' => $this->status->id,
-            'user_id' => $this->user->id
+            'user_id'   => $this->user->id,
         ]);
     }
 
