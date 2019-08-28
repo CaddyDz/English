@@ -2,8 +2,8 @@
 
 namespace English\Http\Controllers;
 
-use English\Status;
 use English\Http\Requests\ReactToStatusRequest;
+use English\Status;
 
 class ReactsController extends Controller
 {
@@ -20,7 +20,7 @@ class ReactsController extends Controller
      *
      * Store a reaction record associated with the status
      *
-     * @param Status $status  The status model
+     * @param Status                                     $status  The status model
      * @param English\Http\Requests\ReactToStatusRequest $request Valid request object
      *
      * @throws StatusNotFoundException

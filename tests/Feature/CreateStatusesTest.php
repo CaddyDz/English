@@ -16,7 +16,6 @@ class CreateStatusesTest extends TestCase
      *
      * @return PHPUnit\Framework::expectException
      */
-
     public function test_guests_shall_not_create_statuses()
     {
         $this->get('/')->assertDontSee('Write status');

@@ -24,7 +24,7 @@ class ReactToStatusRequest extends FormRequest
     public function rules()
     {
         return [
-            'reaction_type' => 'bail|required|in:like,dislike,love,hate,angry,haha,wow'
+            'reaction_type' => 'bail|required|in:like,dislike,love,hate,angry,haha,wow',
         ];
     }
 }

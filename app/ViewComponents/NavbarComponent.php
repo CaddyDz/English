@@ -3,8 +3,8 @@
 namespace English\ViewComponents;
 
 use English\Tag;
-use Illuminate\Support\Facades\View;
 use Illuminate\Contracts\Support\Htmlable;
+use Illuminate\Support\Facades\View;
 
 class NavbarComponent implements Htmlable
 {

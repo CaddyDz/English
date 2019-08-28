@@ -29,7 +29,6 @@ class CommentBrowserTest extends DuskTestCase
      *
      * @return void
      */
-
     public function test_an_authenticated_user_may_engage_in_a_status()
     {
         $user = $this->user;

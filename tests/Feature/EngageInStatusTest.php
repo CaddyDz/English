@@ -23,7 +23,6 @@ class EngageInStatusTest extends TestCase
      *
      * @return void
      */
-
     public function test_a_comment_requires_a_body()
     {
         $this->login();

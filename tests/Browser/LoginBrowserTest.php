@@ -3,8 +3,8 @@
 namespace Tests\Browser;
 
 use English\User;
-use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
+use Tests\DuskTestCase;
 
 class LoginBrowserTest extends DuskTestCase
 {
@@ -13,7 +13,6 @@ class LoginBrowserTest extends DuskTestCase
      *
      * @return assertion
      */
-
     public function test_a_user_can_login()
     {
         $user = create(User::class, ['email' => 'salim@english.dz']);

@@ -2,10 +2,10 @@
 
 namespace Tests\Browser;
 
-use English\User;
 use English\Status;
-use Tests\DuskTestCase;
+use English\User;
 use Laravel\Dusk\Browser;
+use Tests\DuskTestCase;
 
 class RedirectAfterLoginBrowserTest extends DuskTestCase
 {
