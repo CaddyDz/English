@@ -2,10 +2,10 @@
 
 namespace English;
 
-use Illuminate\Support\Str;
-use Illuminate\Database\Eloquent\Model;
-use Cog\Laravel\Love\Reactable\Models\Traits\Reactable;
 use Cog\Contracts\Love\Reactable\Models\Reactable as ReactableContract;
+use Cog\Laravel\Love\Reactable\Models\Traits\Reactable;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Status extends Model implements ReactableContract
 {
