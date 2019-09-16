@@ -2,8 +2,8 @@
 
 namespace English\Http\Controllers;
 
-use English\Status;
 use English\Http\Requests\ReactToStatusRequest;
+use English\Status;
 
 class ReactsController extends Controller
 {
