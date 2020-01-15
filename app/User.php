@@ -9,8 +9,8 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable implements ReacterableContract
 {
-    use Notifiable, Reacterable;
-
+    use Notifiable;
+    use Reacterable;
     public function shouldRegisterAsLoveReacterOnCreate(): bool
     {
         return true;
