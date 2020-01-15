@@ -11,6 +11,7 @@ class User extends Authenticatable implements ReacterableContract
 {
     use Notifiable;
     use Reacterable;
+
     public function shouldRegisterAsLoveReacterOnCreate(): bool
     {
         return true;
