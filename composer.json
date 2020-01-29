@@ -8,7 +8,7 @@
         "php": "^7.2",
         "cybercog/laravel-love": "^8.0",
         "fideloper/proxy": "^4.0",
-        "laravel/framework": "6.12.*",
+        "laravel/framework": "6.13.*",
         "laravel/tinker": "^2.0",
         "sentry/sentry-laravel": "^1.0.2"
     },
