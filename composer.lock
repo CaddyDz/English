@@ -4610,16 +4610,16 @@
         },
         {
             "name": "laravel/dusk",
-            "version": "v5.10.0",
+            "version": "v5.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/dusk.git",
-                "reference": "38776592d7c427a10eff69b15ba911f629a69ed8"
+                "reference": "e07cc46a1e39767739e8197189780b4c2639806d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/dusk/zipball/38776592d7c427a10eff69b15ba911f629a69ed8",
-                "reference": "38776592d7c427a10eff69b15ba911f629a69ed8",
+                "url": "https://api.github.com/repos/laravel/dusk/zipball/e07cc46a1e39767739e8197189780b4c2639806d",
+                "reference": "e07cc46a1e39767739e8197189780b4c2639806d",
                 "shasum": ""
             },
             "require": {
@@ -4674,7 +4674,7 @@
                 "testing",
                 "webdriver"
             ],
-            "time": "2020-03-17T17:00:25+00:00"
+            "time": "2020-03-24T16:21:49+00:00"
         },
         {
             "name": "mockery/mockery",
