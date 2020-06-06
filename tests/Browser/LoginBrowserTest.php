@@ -3,8 +3,8 @@
 namespace Tests\Browser;
 
 use English\User;
-use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
+use Tests\DuskTestCase;
 
 class LoginBrowserTest extends DuskTestCase
 {
