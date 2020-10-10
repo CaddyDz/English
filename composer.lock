@@ -181,16 +181,16 @@
         },
         {
             "name": "cybercog/laravel-love",
-            "version": "8.5.0",
+            "version": "8.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cybercog/laravel-love.git",
-                "reference": "256ac432ead8cb732f0b842171ce56fe0ec2a3c7"
+                "reference": "526d12d84966ba5f5de607416ee6281a880e9a58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cybercog/laravel-love/zipball/256ac432ead8cb732f0b842171ce56fe0ec2a3c7",
-                "reference": "256ac432ead8cb732f0b842171ce56fe0ec2a3c7",
+                "url": "https://api.github.com/repos/cybercog/laravel-love/zipball/526d12d84966ba5f5de607416ee6281a880e9a58",
+                "reference": "526d12d84966ba5f5de607416ee6281a880e9a58",
                 "shasum": ""
             },
             "require": {
@@ -266,7 +266,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-09-08T22:42:28+00:00"
+            "time": "2020-10-04T07:00:52+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
