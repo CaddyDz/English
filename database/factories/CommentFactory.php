@@ -27,7 +27,7 @@ class CommentFactory extends Factory
     {
         return [
             'status_id' => fn () => Status::factory()->create()->id,
-            'user_id'   => fn ()   => User::factory()->create()->id,
+            'user_id'   => fn () => User::factory()->create()->id,
             'body'      => $this->faker->paragraph,
         ];
     }
