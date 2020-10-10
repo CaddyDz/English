@@ -8,50 +8,50 @@ use Illuminate\Support\Facades\Schema;
 
 final class CreateLoveReactionsTable extends Migration
 {
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up(): void
-	{
-		Schema::create('love_reactions', function (Blueprint $table) {
-			$table->bigIncrements('id');
-			$table->unsignedBigInteger('reactant_id');
-			$table->unsignedBigInteger('reacter_id');
-			$table->unsignedBigInteger('reaction_type_id');
-			$table->decimal('rate', 4, 2);
-			$table->timestamps();
-			$table->index([
-				'reactant_id',
-				'reaction_type_id',
-			]);
-			$table->index([
-				'reactant_id',
-				'reacter_id',
-				'reaction_type_id',
-			]);
-			$table->index([
-				'reactant_id',
-				'reacter_id',
-			]);
-			$table->index([
-				'reacter_id',
-				'reaction_type_id',
-			]);
-			$table->foreign('reactant_id')->references('id')->on('love_reactants')->onDelete('cascade');
-			$table->foreign('reacter_id')->references('id')->on('love_reacters')->onDelete('cascade');
-			$table->foreign('reaction_type_id')->references('id')->on('love_reaction_types')->onDelete('cascade');
-		});
-	}
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up(): void
+    {
+        Schema::create('love_reactions', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('reactant_id');
+            $table->unsignedBigInteger('reacter_id');
+            $table->unsignedBigInteger('reaction_type_id');
+            $table->decimal('rate', 4, 2);
+            $table->timestamps();
+            $table->index([
+                'reactant_id',
+                'reaction_type_id',
+            ]);
+            $table->index([
+                'reactant_id',
+                'reacter_id',
+                'reaction_type_id',
+            ]);
+            $table->index([
+                'reactant_id',
+                'reacter_id',
+            ]);
+            $table->index([
+                'reacter_id',
+                'reaction_type_id',
+            ]);
+            $table->foreign('reactant_id')->references('id')->on('love_reactants')->onDelete('cascade');
+            $table->foreign('reacter_id')->references('id')->on('love_reacters')->onDelete('cascade');
+            $table->foreign('reaction_type_id')->references('id')->on('love_reaction_types')->onDelete('cascade');
+        });
+    }
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down(): void
-	{
-		Schema::dropIfExists('love_reactions');
-	}
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('love_reactions');
+    }
 }
