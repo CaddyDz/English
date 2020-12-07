@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Database\Factories\English;
+namespace Database\Factories;
 
 use English\User;
 use Illuminate\Support\Str;

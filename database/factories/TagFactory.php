@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Database\Factories\English;
+namespace Database\Factories;
 
 use English\Tag;
 use Illuminate\Database\Eloquent\Factories\Factory;
