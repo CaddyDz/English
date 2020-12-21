@@ -1,21 +1,23 @@
 build:
+    tests:
+        override:
+            - true
+
     nodes:
+        tests:
+            environment:
+                php:
+                    version: 7.4
+                    pecl_extensions:
+                        - zip
         analysis:
-            project_setup:
-                override:
-                    - 'true'
             environment:
                 php:
                     version: 7.4
                     pecl_extensions:
                         - zip
             tests:
-                override:
-                    - php-scrutinizer-run
-                    -
-                        command: phpcs-run
-                        use_website_config: false
-                    - js-scrutinizer-run
+                override: [php-scrutinizer-run]
 filter:
     paths:
         - 'app/*'
@@ -24,11 +26,10 @@ filter:
         - 'app/config/*'
         - 'app/database/*'
 checks:
-    javascript:
-        no_var: true
-        no_param_assign: true
-        no_loop_var_assign: true
-        no_implicit_undefined_return: true
-        no_else_return: true
-        no_alert: true
-        eqeqeq: true
+    php: true
+    javascript: true
+coding_style:
+    php:
+        spaces:
+            within:
+                brackets: true
