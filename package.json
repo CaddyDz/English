@@ -19,7 +19,7 @@
     },
     "dependencies": {
         "axios": "^0.19.2",
-        "eslint-plugin-vue": "^6.2.2",
+        "eslint-plugin-vue": "^7.3.0",
         "jquery": "^3.5.1",
         "lato-webfont": "^2.15.1",
         "raleway-webfont": "^3.0.1",
