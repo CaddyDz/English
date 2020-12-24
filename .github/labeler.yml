@@ -1,0 +1,34 @@
+tests:
+  - tests/**/*Test.php
+  - ./phpunit.xml
+
+CS:
+  - ./.editorconfig
+  - ./.php_cs
+
+dependencies:
+  - ./composer.*
+  - ./package*.json
+
+javascript:
+  - .js
+  - .vue
+
+Localization: resources/lang/*
+
+database: database/*
+
+UI: resources/views/*
+
+admin: app/Nova/*
+
+config:
+  - config/*
+  - .env.example
+
+# Add 'repo' label to files that affect only the GitHub Repository
+repo:
+  - .gitignore
+  - .gitattribute
+  - .github/*
+  - ./README.md
