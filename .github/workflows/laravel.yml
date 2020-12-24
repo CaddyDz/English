@@ -1,4 +1,4 @@
-name: Laravel
+name: PHPUnit tests
 
 on:
   push:
@@ -13,11 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Download Dependencies
-      run: |
-        wget templates.sitando.com/nova.zip
-        unzip -qq nova.zip
-        rm nova.zip
     - name: Install Dependencies
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
     - name: Directory Permissions
