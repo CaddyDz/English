@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace English\Http\Controllers;
 
-use English\{Status, Tag};
+use English\Tag;
+use English\Status;
 use Illuminate\Http\Request;
 use English\Filters\StatusFilters;
 
