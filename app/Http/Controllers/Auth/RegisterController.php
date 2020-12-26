@@ -5,10 +5,9 @@ declare(strict_types=1);
 namespace English\Http\Controllers\Auth;
 
 use English\User;
-use Illuminate\Support\Facades\Hash;
 use English\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\{Hash, Validator};
 
 class RegisterController extends Controller
 {
