@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
-use English\User;
-use English\Status;
-use English\Comment;
+use English\{Comment, Status, User};
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CommentFactory extends Factory
