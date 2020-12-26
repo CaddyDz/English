@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
-use English\User;
-use English\Status;
+use English\{Status, User};
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class StatusFactory extends Factory
