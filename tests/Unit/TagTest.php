@@ -4,9 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Unit;
 
-use English\Tag;
-use English\Status;
 use Tests\TestCase;
+use English\{Status, Tag};
 
 class TagTest extends TestCase
 {
