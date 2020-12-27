@@ -2,7 +2,8 @@
 
 declare(strict_types=1);
 
-use English\{Comment, Status};
+use English\Status;
+use English\Comment;
 use Illuminate\Database\Seeder;
 
 class StatusesTableSeeder extends Seeder
