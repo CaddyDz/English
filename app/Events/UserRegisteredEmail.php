@@ -9,7 +9,8 @@ use Illuminate\Queue\SerializesModels;
 
 class UserRegisteredEmail
 {
-    use InteractsWithSockets, SerializesModels;
+    use InteractsWithSockets;
+    use SerializesModels;
 
     public $user;
     public $password;

@@ -14,19 +14,19 @@ class StatusAcceptanceTest extends TestCase
         parent::setUp();
         $this->Status = factory(English\Models\Status::class)->make([
             'id'             => '1',
-                'user_id'    => '1',
-                'body'       => 'sed a consequatur libero',
-                'image'      => 'eos',
-                'created_at' => '2017-09-06 01:16:45',
-                'updated_at' => '2017-09-06 01:16:45',
+            'user_id'        => '1',
+            'body'           => 'sed a consequatur libero',
+            'image'          => 'eos',
+            'created_at'     => '2017-09-06 01:16:45',
+            'updated_at'     => '2017-09-06 01:16:45',
         ]);
         $this->StatusEdited = factory(English\Models\Status::class)->make([
             'id'             => '1',
-                'user_id'    => '1',
-                'body'       => 'sed a consequatur libero',
-                'image'      => 'eos',
-                'created_at' => '2017-09-06 01:16:45',
-                'updated_at' => '2017-09-06 01:16:45',
+            'user_id'        => '1',
+            'body'           => 'sed a consequatur libero',
+            'image'          => 'eos',
+            'created_at'     => '2017-09-06 01:16:45',
+            'updated_at'     => '2017-09-06 01:16:45',
         ]);
         $user = factory(English\Models\User::class)->make();
         $this->actor = $this->actingAs($user);

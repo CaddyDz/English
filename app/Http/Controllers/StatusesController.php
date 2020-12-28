@@ -4,7 +4,6 @@ namespace English\Http\Controllers;
 
 use English\Http\Requests\StatusCreateRequest;
 use English\Http\Requests\StatusUpdateRequest;
-use English\Models\Comment;
 use English\Models\Status;
 use English\Services\StatusService;
 use Illuminate\Http\Request;
@@ -61,9 +60,9 @@ class StatusesController extends Controller
     {
         if ($request->ajax()) {
             $this->validate($request, [
-          'body'  => 'required|max:1000',
-          'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
+                'body'  => 'required|max:1000',
+                'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            ]);
             $id = \Auth::user()->statuses()->create($request->only('body', 'image'))->id;
             if ($id) {
                 // return the ID of the created status
@@ -157,7 +156,7 @@ class StatusesController extends Controller
         if ($request->ajax()) {
             $status = Status::find($request->status_id);
             $this->validate($request, [
-              'replyBody' => 'required|max:1000',
+                'replyBody' => 'required|max:1000',
             ]);
             // Check if the status being replied to exists
             $status = Status::find($request->status_id);
@@ -165,13 +164,13 @@ class StatusesController extends Controller
                 return Response::json(['errors' => 'Status doesn\'t exist']);
             }
             $comment = $status->comments()->create([
-              'body'    => $request->replyBody,
-              'user_id' => \Auth::user()->id,
+                'body'    => $request->replyBody,
+                'user_id' => \Auth::user()->id,
             ]);
 
             return view('comments.show')->with([
-              'comment' => $comment,
-              'status'  => $status,
+                'comment' => $comment,
+                'status'  => $status,
             ])->render();
         }
     }

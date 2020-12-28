@@ -14,19 +14,19 @@ class StatusServiceTest extends TestCase
         $this->service = $this->app->make(StatusService::class);
         $this->originalArray = [
             'id'             => '1',
-                'user_id'    => '1',
-                'body'       => 'est quaerat suscipit vel',
-                'image'      => 'ut',
-                'created_at' => '2017-09-06 01:16:45',
-                'updated_at' => '2017-09-06 01:16:45',
+            'user_id'        => '1',
+            'body'           => 'est quaerat suscipit vel',
+            'image'          => 'ut',
+            'created_at'     => '2017-09-06 01:16:45',
+            'updated_at'     => '2017-09-06 01:16:45',
         ];
         $this->editedArray = [
             'id'             => '1',
-                'user_id'    => '1',
-                'body'       => 'est quaerat suscipit vel',
-                'image'      => 'ut',
-                'created_at' => '2017-09-06 01:16:45',
-                'updated_at' => '2017-09-06 01:16:45',
+            'user_id'        => '1',
+            'body'           => 'est quaerat suscipit vel',
+            'image'          => 'ut',
+            'created_at'     => '2017-09-06 01:16:45',
+            'updated_at'     => '2017-09-06 01:16:45',
         ];
         $this->searchTerm = '';
     }

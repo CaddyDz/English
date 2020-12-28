@@ -22,9 +22,9 @@ class UserTableSeeder extends Seeder
                 'password' => bcrypt('admin'),
             ]);
             $caddy = User::create([
-              'name'     => 'Caddy',
-              'email'    => 'caddy@english.dz',
-              'password' => bcrypt('password'),
+                'name'     => 'Caddy',
+                'email'    => 'caddy@english.dz',
+                'password' => bcrypt('password'),
             ]);
             $service->create($admin, 'admin', 'admin', false);
             $service->create($caddy, 'password', 'member', false);
