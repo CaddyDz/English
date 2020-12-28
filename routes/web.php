@@ -134,8 +134,8 @@ Route::group(['middleware' => ['auth', 'active']], function () {
     ]);
 
     Route::get('search', [
-       'uses' => 'SearchController@getResults',
-       'as'   => 'search.results',
+        'uses' => 'SearchController@getResults',
+        'as'   => 'search.results',
     ]);
     /*
     |--------------------------------------------------------------------------

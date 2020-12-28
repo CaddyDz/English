@@ -172,8 +172,8 @@ class UserService
                     $this->setAndSendUserActivationToken($user);
                 } else {
                     $user->meta()->update([
-                      'is_active' => 1,
-                  ]);
+                        'is_active' => 1,
+                    ]);
                 }
             });
 

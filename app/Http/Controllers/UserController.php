@@ -86,8 +86,8 @@ class UserController extends Controller
     public function update(Request $request)
     {
         $messages = [
-          'password_hash_check' => 'Old password incorrect',
-      ];
+            'password_hash_check' => 'Old password incorrect',
+        ];
         // Validate input data
         $hashed_password = Auth::user()->password;
         // FIXME: Validation not working
@@ -103,18 +103,18 @@ class UserController extends Controller
         ], $messages);
         */
         Auth::user()->update([
-          // Update the data in DB
-          'name' => $request->input('name'),
+            // Update the data in DB
+            'name' => $request->input('name'),
 
-          'password' => bcrypt($request->input('password')),
+            'password' => bcrypt($request->input('password')),
 
-      ]);
+        ]);
         Auth::user()->meta()->update([
-        'first_name' => $request->input('first_name'),
-        'last_name'  => $request->input('last_name'),
-        'location'   => $request->input('location'),
-        'avatar'     => $request->file('avatar'),
-      ]);
+            'first_name' => $request->input('first_name'),
+            'last_name'  => $request->input('last_name'),
+            'location'   => $request->input('location'),
+            'avatar'     => $request->file('avatar'),
+        ]);
         if ($request->hasFile('avatar')) {
             $avatar = $request->file('avatar');
             $filename = time().Auth::user()->id.random_int(0, time());

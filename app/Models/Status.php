@@ -18,8 +18,8 @@ class Status extends Model
     ];
 
     public static $rules = [
-      'body'  => 'required|max:1000',
-      'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        'body'  => 'required|max:1000',
+        'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
     ];
 
     public function user()
