@@ -1,6 +1,4 @@
 #topNavbar {
-  background-color: #2ecc71;
-  border-color: #2bc071;
   color: #eaeaea;
 }
 
@@ -16,14 +14,22 @@
   color: white;
 }
 
+#topNavSearchBar input[type=text]::selection {
+  color: white;
+}
+
 #topNavbar > .right.menu a {
   color: white !important;
 }
 
-.ui.menu .dropdown.item .menu {
-  background-color: #7ae4a7 !important;
+#profileDropdown {
+  color: #fff;
 }
 
-#profileDropdown {
-  color: #eaeaea;
+.ui.menu .dropdown.item .menu {
+  background-color: #000 !important;
+}
+
+#topNavbar > .right.menu a:hover {
+  border-color: #fff !important;
 }

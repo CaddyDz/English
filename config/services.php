@@ -20,7 +20,7 @@ return [
     ],
 
     'ses' => [
-        'key' => env('SES_KEY'),
+        'key'    => env('SES_KEY'),
         'secret' => env('SES_SECRET'),
         'region' => 'us-east-1',
     ],
@@ -30,9 +30,15 @@ return [
     ],
 
     'stripe' => [
-        'model' => English\User::class,
-        'key' => env('STRIPE_KEY'),
+        'model'  => English\User::class,
+        'key'    => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'github' => [
+        'client_id'     => 'id code',
+        'client_secret' => 'secret code',
+        'redirect'      => 'http://your-domain/auth/github/callback',
+        'scopes'        => ['user:email'],
+    ],
 ];

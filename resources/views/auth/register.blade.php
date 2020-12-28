@@ -1,56 +1,65 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="ui container">
-    <div class="ui two column centered grid">
-        <div class="column">
-          <form class="ui form raised segment" role="form" method="POST" action="{{ route('register') }}">
-            <div class="ui header">Register</div>
-              {{ csrf_field() }}
-              <div class="field{{ $errors->has('name') ? ' has-error' : '' }}">
-                <label for="name">Username</label>
-                <input id="name" type="text" name="name" value="{{ old('name') }}"  autofocus required>
-                @if ($errors->has('name'))
-                    <span>
-                        <strong>{{ $errors->first('name') }}</strong>
-                    </span>
-                @endif
-              </div>
-              <div class="field{{ $errors->has('email') ? ' has-error' : '' }}">
-                  <label for="email">E-Mail Address</label>
-                  <input id="email" type="text" name="email" value="{{ old('email') }}" required>
-                  @if ($errors->has('email'))
-                      <span>
-                          <strong>{{ $errors->first('email') }}</strong>
-                      </span>
-                  @endif
-              </div>
-              <div class="field{{ $errors->has('password') ? ' has-error' : '' }}">
-                  <label for="password">Password</label>
-                  <input id="password" type="password" name="password" required>
-                  @if ($errors->has('password'))
-                      <span>
-                          <strong>{{ $errors->first('password') }}</strong>
-                      </span>
-                  @endif
-              </div>
-              <div class="field">
-                <label for="password-confirm">Confirm Password</label>
-                <input id="password-confirm" type="password" name="password_confirmation" required>
-                </div>
-              <div class="field">
-                <button type="submit" class="ui primary button">
-                    Register
-                </button>
-              </div>
-              <div class="ui error message"></div>
-          </form>
+<div class="ui inverted raised very padded container segment">
+  <div class="ui centered container">
+    <form class="ui inverted big form" method="POST" id="signup" action="/register">
+      <h2 class="ui inverted centered header">Sign up Now</h2>
+          {{ csrf_field() }}
+          <div class="field">
+              <label>Username</label>
+              <input type="text" placeholder="Username" name="username" value="{{ old('username') }}">
+              @if($errors->has('username'))
+               <div class="ui tiny negative message">
+                   <i class="warning circular icon"></i>
+                   {{ $errors->first('username') }}
+               </div>
+              @endif
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Example@example.com" class="ui input" autocomplete="email" value="{{ old('email') }}">
+            @if($errors->has('email'))
+             <div class="ui tiny negative message">
+               <i class="warning circular icon"></i>
+               {{ $errors->first('email') }}
+             </div>
+            @endif
+          </div>
+        <div class="two fields">
+          <div class="field">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Password" class="ui input" autocomplete="new-password">
+            @if($errors->has('password'))
+             <div class="ui tiny negative message">
+               <i class="warning circular icon"></i>
+               {{ $errors->first('password') }}
+             </div>
+            @endif
+          </div>
+          <div class="field">
+            <label>Password Confirmation</label>
+            <input type="password" name="password_confirmation" placeholder="Password Confirmation" class="ui input" autocomplete="new-password">
+            @if($errors->has('password_confirmation'))
+             <div class="ui tiny negative message">
+               <i class="warning circular icon"></i>
+               {{ $errors->first('password_confirmation') }}
+             </div>
+            @endif
+          </div>
         </div>
-    </div>
+        <div class="inline field">
+            <div class="ui slider checkbox">
+                <input type="checkbox" name="terms_and_conditions">
+                <label>I agree to <a href="{{ url('/terms') }}">the Terms and Conditions</a></label>
+                @if($errors->has('terms_and_conditions'))
+                 <div class="ui tiny negative message">
+                   <i class="warning circular icon"></i>
+                   {{ $errors->first('terms_and_conditions') }}
+                 </div>
+                @endif
+            </div>
+        </div>
+        <div>
+          <input type="submit" class="ui inverted fluid basic button" value="Sign up">
+        </div>
+    </form>
 </div>
-@include('layouts.footer')
-@endsection
-
-@section('scripts')
-  <script src="{{ asset('js/register.js') }}" charset="utf-8"></script>
-@endsection
+</div>

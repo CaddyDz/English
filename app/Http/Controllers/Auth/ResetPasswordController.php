@@ -21,7 +21,7 @@ class ResetPasswordController extends Controller
     use ResetsPasswords;
 
     /**
-     * Where to redirect users after resetting their password.
+     * Where to redirect users after login / registration.
      *
      * @var string
      */
@@ -29,6 +29,8 @@ class ResetPasswordController extends Controller
 
     /**
      * Create a new controller instance.
+     *
+     * @return void
      */
     public function __construct()
     {

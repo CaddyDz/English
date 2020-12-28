@@ -2,8 +2,8 @@
 
 namespace English\Providers;
 
-use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Event;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -13,16 +13,20 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'English\Events\SomeEvent' => [
-            'English\Listeners\EventListener',
+        'English\Events\Event' => [
+            'English\Listeners\UserRegisteredEmailListener',
         ],
     ];
 
     /**
      * Register any events for your application.
+     *
+     * @return void
      */
     public function boot()
     {
         parent::boot();
+
+        //
     }
 }

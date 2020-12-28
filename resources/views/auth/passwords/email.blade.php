@@ -1,34 +1,27 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
 @section('content')
-<div class="ui container">
-  <div class="ui two column centered grid">
-    <div class="column">
-      @if (session('status'))
-        <div class="alert alert-success">
-          {{ session('status') }}
+
+<div class="ui fluid container">
+    <div class="ui three column grid">
+        <div class="column centered">
+
+            <h1>Forgot Password</h1>
+
+            <form class="ui form" method="POST" action="/password/email">
+                {!! csrf_field() !!}
+                <div class="field">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Email Address" value="{{ old('email') }}">
+                </div>
+                <div class="field raw-margin-top-24">
+                    <a class="ui button violet left" href="/login">Wait I remember!</a>
+                    <button class="ui primary button right floated" type="submit" class="button">Send Password Reset Link</button>
+                </div>
+            </form>
+
         </div>
-      @endif
-      <form class="ui form raised segment" role="form" method="POST" action="{{ route('password.email') }}">
-        <div class="ui header">Reset Password</div>
-        {{ csrf_field() }}
-        <div class="field{{ $errors->has('email') ? ' has-error' : '' }}">
-          <label for="email">E-Mail Address</label>
-          <input id="email" type="email" name="email" value="{{ old('email') }}" required>
-          @if ($errors->has('email'))
-            <span class="help-block">
-              <strong>{{ $errors->first('email') }}</strong>
-            </span>
-          @endif
-        </div>
-        <div class="field">
-          <button type="submit" class="ui primary button">
-            Send Password Reset Link
-          </button>
-        </div>
-      </form>
     </div>
-  </div>
 </div>
+
 @endsection
-@include('layouts.footer')

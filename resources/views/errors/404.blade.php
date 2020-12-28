@@ -1,14 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.master')
+
+@section('title', 'Page not Found')
 
 @section('content')
-  <div class="ui container">
-    <div class="ui centered segment">
-      <div class="ui error message">
-        <div class="header">
-            Oops ! looks like you had a wrong turn.
-        </div>
-        <a href="{{ route('home') }}">Go Home!</a>
-      </div>
-    </div>
-  </div>
-@stop
+  <h1 class="ui center aligned header">Page not found 404</h1>
+@endsection
